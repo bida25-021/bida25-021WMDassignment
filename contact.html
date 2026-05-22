@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - Batsetsa Nyame</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        .contact-info {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+        }
+        .contact-info a {
+            color: #00bfff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .review-heading {
+            margin-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 20px;
+            color: #fff;
+        }
+        .rating-stars {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            margin: 15px 0;
+        }
+        .rating-stars input {
+            display: none;
+        }
+        .rating-stars label {
+            font-size: 2.5rem;
+            color: #444;
+            cursor: pointer;
+            transition: color 0.2s ease;
+            padding: 0 5px;
+        }
+        .rating-stars input:checked ~ label,
+        .rating-stars label:hover,
+        .rating-stars label:hover ~ label {
+            color: #ffcc00; /* Vibrant gold for selected stars */
+        }
+        .review-box {
+            width: 100%;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 6px;
+            padding: 12px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            resize: vertical;
+            margin-bottom: 15px;
+        }
+        .submit-btn {
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .submit-btn:hover {
+            background-color: #005a9e;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Contact Me</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <div class="contact-container">
+            <p class="contact-info">Contact me at: <a href="mailto:bida25-021@thuto.bac.ac.bw">bida25-021@thuto.bac.ac.bw</a></p>
+            
+            <h2 class="review-heading">Leave a Review</h2>
+            <p style="color: #bbb; font-size: 0.9rem;">Your feedback matters! Rate your experience below:</p>
+
+            <form onsubmit="alert('Thank you for your review!'); return false;">
+                
+                <div class="rating-stars">
+                    <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                </div>
+
+                <textarea class="review-box" placeholder="Write your review or comments here..." required></textarea>
+                
+                <br>
+                <button type="submit" class="submit-btn">Submit Review</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>2026 Batsetsa Nyame | All Rights Reserved</p>
+        <p>Email: bida25-021@thuto.bac.ac.bw</p>
+    </footer>
+
+</body>
+</html>
